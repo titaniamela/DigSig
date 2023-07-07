@@ -1,0 +1,121 @@
+Preneel, B. (2010). Cryptographic hash functions. European Transactions on Telecommunications, 5(4), 431–448. https://doi.org/10.1002/ett.4460050406
+
+HASH
+Pendekatan cipher simetris atau asimentris, dimana kerahasiaan jumlah data yang besar didasarkan pada kerahasiaan dan keaslian kunci pendek, otentikasi tergantung pada hal tersebut. Untuk mencapai itu, informasi dikompresi ke kuantitas panjang tetap, disebut hash.
+Kemudian kode hash ditambahkan ke informasi. Fungsi yang melakukan operasi kompresi ini disebut fungsi hash. Ide utama dari perlindungan integritas adalah untuk menambahkan redudansi ke informasi. Redudansi memungkinkan penerima untuk membuat perbedaan antara informasi asli dan informasi palsu.
+Untuk menjamin asal data, kunci rahasia yang diasosiasikan dengan asal harus diintervensi dalam proses. Kunci rahasia dapat terlibat dalam proses kompresi atau dapat digunakan untuk melindungi kode hash dan/atau informasi    
+
+(asimetri : hanya pembuat yang dapat menghasilkan tanda tangan, tetapi siapapun dapat memverifikasinnya)
+
+Fungsi Hash adalah fungsi yang mengkompresi masukan dengan panjang sembarang ke hasil dengan panjang tetap. Fungsi hash adalah alat yang sangat kuat dalam desain teknik untuk melindungi keaslian informasi. Fungsi hash digunakan untuk mengalokasikan penyimpanan yang sama untuk record dari sebuah file (Preneel, 2010)
+
+Dalam Hash ada istilah teknik non-repudiasi, dimana penerima diberikan jaminan keaslian pesan, berarti penerima selanjutnya dapat membuktikan kepada pihak ketiga bahwa pesan itu otentik bahkan jika pengirimnya kemudian mencabutnya.
+
+Digital Signature adalah salah satu aplikasi yang menggunakan fungsi hash. Fungsi hash disini digunakan untuk mengompresi informasi yang akan ditandatangani ke bentuk string dengan panjang tetap. Untuk memverifikasi tanda tangan, hasil dari proses verifikasi tanda tangan dibandingkan dengan kode hash yang dapat dihitung dri informasi.
+
+Algoritma yang dirancang untuk operasi hashing
+1.	The Binary Condensing Algorithm (BCA)
+dirancang khusus untuk sistem keamanan standar Belgia TRASEC (Transmission SECurity) untuk EFT. Fungsi bulat nya terdiri dari operasi pencampuran dan kondensatin. Operasi pencampuran mengambil input blok 256-byte yang terdiri dari 224 byte pesan dan 32 byte dari variabel rantai.
+
+2.	MD2
+R. Rivest dari RSA Data Security Inc. telah merancang serangkaian fungsi hash, yang diberi nama MD untuk “message digest” diikuti dengan angka. MD1 adalah algoritma berpemilik. MD2 disarankan pada tahun 1990, dan direkomendasikan untuk menggantikan BMAC. MD3 tidak pernah diterbitkan, dan tampaknya telah ditinggalkan oleh perancangnya.
+
+
+3.	MD4
+MD4 adalah fungsi hash iteratif yang beroperasi pada kata 32-bit. Fungsi putaran mengambil sebagai input variabel rantai 4 kata dan blok pesan 16 kata dan memetakannya ke variabel rantai baru. Semua operasi didefinisikan pada kata 32-bit. Transformasi terdiri dari 3 putaran, dan setiap putaran terdiri dari 16 langkah.
+
+Dalam setiap langkah satu kata dari variabel rantai dimodifikasi sebagai berikut: kata pesan dan fungsi non linier dari tiga variabel rantai lainnya ditambahkan, dan hasilnya diputar di atas sejumlah variabel posisi.
+
+Setiap kata pesan digunakan tepat satu kali dalam setiap putaran, tetapi dalam urutan yang berbeda. Setelah 3 putaran, variabel rantai sebelumnya ditambahkan ke variabel rantai baru untuk membuat fungsi tidak dapat diubah. Deskripsi lengkap menentukan aturan padding dan nilai awal.
+
+4.	MD5
+R. Rivest menyadari bahwa tingkat keamanan MD4 tidak sebesar yang diinginkannya, dan pada tahun 1991 ia mengusulkan versi MD4 yang diperkuat, yaitu MD5. 
+
+Argumen tambahan adalah bahwa meskipun MD4 bukan desain yang sangat konservatif, itu diterapkan dengan cepat ke dalam produk. MD5 memiliki babak tambahan, dan memiliki fungsi multiplexer di babak pertama dan kedua. Urutan penggunaan kata-kata pesan telah diubah, dan 16 jumlah rotasi yang berbeda diperkenalkan.
+
+Dua perubahan yang luar biasa adalah bahwa setiap langkah sekarang memiliki konstanta aditif yang unik, yang membutuhkan sekitar 250 byte tambahan penyimpanan, dan inti dari algoritme dimodifikasi.
+
+5.	SHA
+Pada tanggal 31 Januari 1992, NIST (National Institute for Standards and Technology, USA) menerbitkan dalam Federal Register usulan Secure Hash Standard (SHS) [112] yang berisi deskripsi Secure Hash Algorithm (SHA). Fungsi hash ini dirancang untuk bekerja dengan Digital Signature Algorithm (DSA) yang diusulkan dalam Digital Signature Standard (DSS).
+
+Ukuran variabel rantai ditingkatkan menjadi 5 blok 32-bit, yang menghasilkan total 160 bit. Jumlah langkah per putaran telah ditingkatkan menjadi 20, dan jumlah putaran telah ditingkatkan menjadi 4, seperti untuk MD5. Peningkatan jumlah langkah per putaran menyiratkan bahwa setiap kata dari variabel rantai ditransformasikan 4 kali per putaran, seperti untuk MD4 dan MD5. Operasi utama telah dimodifikasi dan sekarang melibatkan rotasi dua variabel. Perubahan yang sangat penting adalah mulai dari 16, kata pesan dihitung sebagai exor dari empat kata pesan sebelumnya. Modifikasi yang hanya mempengaruhi implementasi adalah bahwa byte dalam sebuah kata diurutkan secara berbeda.
+
+
+6.	RIPE-MD
+Dalam kerangka proyek EEC-RACE RIPE [259, 317] versi baru MD4 dikembangkan. Rotasi dan urutan kata-kata pesan dimodifikasi untuk mengurangi kerentanan terhadap serangan sebelumnya. Selain itu, dua contoh algoritma, yang hanya berbeda dalam konstanta, dijalankan secara paralel, tetapi dengan input yang sama. Ini meningkatkan memori internal menjadi 256 bit. Setelah memproses blok 512-bit, kedua variabel rantai digabungkan bersama dengan variabel rantai awal.
+
+7.	HAVAL
+Sementara SHA dan RIPEMD dapat dianggap sebagai varian pada MD4, HAVAL adalah perpanjangan dari MD5. Itu diusulkan oleh Y. Zheng, J. Pieprzyk, dan J. Seberry di Auscrypt'92. Modifikasi pertama di HAVAL adalah bahwa ukuran blok pesan dan variabel rantai digandakan menjadi masing-masing 32 dan 8 kata. Jumlah putaran bisa 3, 4, atau 5 dan setiap putaran terdiri dari 32 langkah. Fungsi nonlinier sederhana digantikan oleh fungsi 7 variabel yang sangat nonlinier.
+
+satu fungsi digunakan di setiap putaran, tetapi di setiap langkah, permutasi yang berbeda diterapkan pada input. Sekali lagi urutan pesan baru telah diperkenalkan, dan setiap langkah (kecuali yang di babak pertama) menggunakan konstanta aditif yang berbeda. Dua rotasi lebih dari 7 dan 11 posisi telah diperkenalkan.
+
+8.	N-HASH
+N-hash adalah fungsi hash yang dirancang oleh S. Miyaguchi, M. Iwata, dan K. Ohta. Ukuran blok variabel chaining dan plaintext sama dengan 128 bit.
+
+9.	FFT-Hash I and II
+FFT-Hash I dan II adalah MDC yang diusulkan oleh C. Schnorr. Algoritma didasarkan pada transformasi bijektif yang dibangun dari transformasi Fourier diskrit dan rekursi polinomial. Keamanan bergantung pada fakta bahwa transformasi polinomial derajat tinggi di atas bidang terbatas menghasilkan keacakan lokal.
+
+10.	Snefru
+R. Merkle menyarankan pada tahun 1989 sebuah fungsi hash satu arah berorientasi perangkat lunak yang dia sebut Snefru.
+
+
+Stinson, D. R., & Paterson, M. B. (2019). Cryptography : theory and practice. Crc Press.
+
+RSA
+Contoh pertama dan paling terkenal dari kriptosistem kunci publik adalah RSA Cyptosystem yang ditemukan oleh Rivest, Shamir dan Adleman. (Stinson & Paterson, 2019)
+
+Ide kriptosistem kunci publik diajukan oleh Diffie dan Hellman pada tahun 1976, kemudian pada tahun 1977, Rivest, Shamir, dan Adleman menemukan sistem kripto RSA yang terkenal. Keamanan RSA didasarkan pada kesulitan memfaktorkan bilangan bulat besar
+
+DIGITAL SIGNATURE
+Dalam skema tanda tangan, kunci privat menentukan algoritma penandatanganan yang dapat digunakan pengirim untuk menandatangani pesan. Algoritma penandatanganan menghasilkan output yang disebut tanda tangan, yang bergantung pada pesan yang ditandatangani serta kuncinya. Tanda tangan kemudian ditambahkan ke pesan. Algoritma penandatanganan hanya diketahui oleh pengirim. Di sisi lain, ada algoritma verifikasi yang merupakan kunci publik (diketahui semua orang). 
+Algoritma verifikasi menerima pesan dan tanda tangan sebagai input, dan menampilkan benar atau salah untuk menunjukkan apakah tanda tangan harus diterima sebagai valid. Salah satu fitur bagus dari skema tanda tangan adalah siapa pun dapat memverifikasi tanda tangan pengirim pada pesan, asalkan mereka memiliki salinan asli kunci verifikasi si pengirim.
+
+Syarat keamana untuk skema tanda tangan adalah tidak mungkin bagi musuh untuk membuat tanda tangan yang valid pada pesan apa pun yang sebelumnya tidak ditanda tangani oleh pengirim. Oleh karena itu, jika penerima menerima pesan dan tag yang valid, maka penerima dapat yakin bahwa tanda tangan tersebut dibuat oleh pengirim dan baik pesan maupun tanda tangan tidak dimodifikasi oleh musuh.
+
+HASH FUNCTIONS
+Dalam praktiknya, pesan “di-hash” sebelum ditandatangani.
+Fungsi hash kriptografis digunakan untuk mengompresi pesan dengan panjang acak menjadi intisari pesan pendek, tampak acak, dan panjang tetap. Fungsi hash adalah fungsi publik yang dianggap diketahui oleh semua orang. Dan fungsi hash tidak memiliki kunci.
+
+Harus ditekankan, fungsi hash tidak dapat digunakan untuk enkripsi, karena dua alasan mendasar. Pertama adalah fakta bahwa fungsi hash tidak memiliki kunci. Yang kedua adalah bahwa fungsi hash tidak dapat dibalik (bukan fungsi injektif) sehingga intisari pesan tidak dapat “didekripsi” untuk menghasilkan nilai teks biasa yang unik.
+
+Fungsi hash kriptografi dapat memberikan jaminan integritas data dalam pengaturan tertentu. Fungsi hash digunakan untuk membuat "sidik jari" singkat dari beberapa data; jika data diubah, maka sidik jari (dengan kemungkinan besar) tidak lagi valid. Misalkan sidik jari disimpan di tempat yang aman. Kemudian, meskipun data disimpan di tempat yang tidak aman, integritasnya dapat diperiksa dari waktu ke waktu dengan menghitung ulang sidik jari dan memverifikasi bahwa sidik jari tidak berubah.
+
+Banyak fungsi hash yang umum digunakan telah dibangun menggunakan pendekatan Merkle-Damg°ard. Yang pertama adalah MD4, yang diusulkan oleh Rivest pada tahun 1990. Rivest kemudian memodifikasi MD4 untuk menghasilkan MD5 pada tahun 1992. Selanjutnya, SHA diusulkan sebagai standar oleh NIST pada tahun 1993, dan diadopsi sebagai FIPS 180. SHA-1 adalah sedikit modifikasi SHA; itu diterbitkan pada tahun 1995 sebagai FIPS 180-1 (dan SHA kemudian disebut dengan nama SHA-0).
+
+
+
+Denning, D. E. (1992). Cryptography and data security. Addison-Wesley.
+
+CRYPTOGRAPHY
+Kriptografi adalah ilmu dan studi tentang penulisan rahasia. Cipher adalah metode penulisan rahasia, di mana plaintext (atau cleartext) diubah menjadi ciphertext (kadang-kadang disebut kriptogram). Proses mengubah plaintext menjadi ciphertext disebut encipherment atau enkripsi; proses kebalikan dari mengubah ciphertext menjadi plaintext disebut decipherment atau dekripsi. Encipherment dan decipherment dikendalikan oleh kunci atau kunci kriptografi (lihat Gambar 1.1). (Denning, 1992)
+ 
+
+Sebuah sistem kriptografi (atau cryptosystem singkatnya) memiliki lima komponen:
+1.	Pesan teks biasa (plaintext),  
+2.	Pesan ciphertext,  
+3.	Kunci,  
+4.	Enkripsi,  
+5.	Dekripsi,  
+
+DIGITAL SIGNATURE
+Tanda tangan digital adalah properti pribadi untuk pengguna atau proses yang digunakan untuk menandatangani pesan. Misalkan B adalah penerima pesan M yang ditandatangani oleh A. Maka tanda tangan A harus memenuhi persyaratan berikut:
+1.	B harus dapat memvalidasi tanda tangan A pada M.
+2.	Pasti tidak mungkin bagi siapa pun, termasuk B, untuk memalsukan tanda tangan A.
+3.	Dalam hal A menolak menandatangani pesan M, hakim atau pihak ketiga harus dapat menyelesaikan sengketa yang timbul antara A dan B.
+Oleh karena itu, tanda tangan digital menetapkan keaslian pengirim; itu analog dengan tanda tangan tertulis biasa. Dengan kondisi (2), itu juga menetapkan keaslian data.
+
+ 
+Pieprzyk, J., & Sadeghiyan, B. (1993). Design of Hashing Algorithms. Springer Verlag.
+
+KRIPTOGRAFI
+Kriptografi adalah studi sistem matematika untuk memecahkan dua jenis masalah keamanan yaitu privasi dan otentikasi (Diffie & Hellman, 1976)
+Sistem privasi mencegah ekstraksi informasi oleh pihak yang tidak berwenang dari pesan yang dikirimkan melalui saluran publik, sehingga memastikan pengirim pesan hanya akan dibaca oleh penerima yang dimaksud. Sistem otentikasi mencegah injeksi pesan yang tidak sah ke saluran publik, meyakinkan penerima pesan tentang legitimasinya. Masalah otentikasi dapat dibagi menjadi otentikasi pesan, di mana masalahnya meyakinkan penerima bahwa teks tidak berubah sejak ditinggalkan pengirim, dan otentikasi pengguna, di mana masalahnya memverifikasi bahwa seseorang adalah yang mereka klaim. 
+
+ENKRIPSI
+Enkripsi adalah transformasi atau fungsi matematis yang diterapkan pada pesan sedemikian rupa sehingga penyadap tidak dapat mengekstraksi informasi yang berguna tentang pesan asli dari pesan yang diubah (pesan yang diubah juga disebut cryptogram atau ciphertext). 
+
+Otentikasi pesan adalah prosedur yang memungkinkan komunikator untuk memverifikasi keaslian dokumen sehingga setiap penipuan atau modifikasi pesan yang tidak disengaja dapat dideteksi oleh penerima yang dimaksud. 
+Teknik otentikasi pesan biasanya didasarkan pada redudansi yang terkandung dalam pesan atau didasarkan pada pemeriksaan beberapa informasi berlebihan yang sesuai ditambahkan ke pesan. 
+
+Dalam skema hashing-signature, tanda tangan diringkas dengan menggunakan algoritma hashing satu arah untuk membentuk intisari pesan kecil dari seluruh pesan. 
+

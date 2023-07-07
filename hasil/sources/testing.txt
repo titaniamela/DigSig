@@ -1,0 +1,96 @@
+Software testing adalah proses mengevaluasi perangkat lunak dengan maksud untuk menemukan kesalahan di dalamnya. Pengujian perangkat lunak adalah teknik yang bertujuan untuk mengevaluasi atribut atau kemampuan dari sebuah program atau produk dan menentukan bahwa itu memenuhi kualitasnya.
+Pengujian software juga digunakan untuk menguji perangkat lunak untuk faktor kualitas software lainnya seperti keandalan, kegunaan, integritas, keamanan, kemampuan, efisiensi, portabilitas, pemeliharaan, kompatibilitas, dll.
+Selama bertahun-tahun sekarang kami masih menggunakan teknik pengujian yang sama. beberapa di antaranya adalah metode buatan dan bukan metode teknik yang baik. Pengujian bisa mahal, tetapi tidak menguji perangkat lunak bisa lebih mahal. Pengujian perangkat lunak bertujuan untuk mencapai tujuan dan prinsip tertentu yang harus diikuti.
+Proses mengevaluasi perangkat lunak untuk menemukan kesalahan dikenal sebagai pengujian software. Pengujian perangkat lunak adalah metode yang digunakan untuk memastikan bahwa sebuah program atau produk memenuhi kualitas.
+Pengujian software juga digunakan untuk mengevaluasi kualitas software lainnya, seperti keandalan, kegunaan, integritas, keamanan, kemampuan, efisiensi, portabilitas, pemeliharaan, kompatibilitas, dll.
+Kami telah menggunakan metode pengujian yang sama selama bertahun-tahun sekarang. Beberapa metode tidak berkualitas teknik dan dibuat. Meskipun pengujian bisa mahal, tidak menguji perangkat lunak juga bisa menjadi lebih mahal. Pengujian perangkat lunak dilakukan dengan tujuan untuk mencapai tujuan dan prinsip tertentu.
+Pengujian perangkat lunak diperlukan untuk memastikan bahwa software yang dibangun telah memenuhi spesifikasi yang diinginkan. Dan juga memastikan apakah ada masalah, kesalahan apapun dalam sistem.
+Salah satu teknik pengujian yang digunakan adalah blackbox testing. 
+Pengujian kotak hitam adalah pengujian perangkat lunak berdasarkan persyaratan output dan tanpa pengetahuan tentang struktur internal atau pengkodean dalam program. Pada dasarnya pengujian kotak hitam adalah bagian integral dari "pengujian ketepatan", tetapi ide-ide tidak terbatas pada tes ketepatannya saja. Tujuannya adalah untuk menguji seberapa baik komponen sesuai dengan persyaratan yang diterbitkan untuk komponen. Pengujian kotak hitam memiliki sedikit atau tidak ada hubungannya dengan struktur logis internal sistem, itu hanya memeriksa aspek fundamental dari sistem. Ini memastikan bahwa input diterima dengan benar dan output diproduksi dengan benar.
+Pengujian kotak hitam adalah pengujian perangkat lunak yang dilakukan tanpa mengetahui struktur internal atau pengkodean program. Pada dasarnya, &quot;pengujian ketepatan&quot; terdiri dari pengujian kotak hitam, tetapi konsep tidak terbatas pada pengujian ketepatan. Tujuannya adalah untuk menguji seberapa baik komponen memenuhi persyaratan yang diterbitkan untuk komponen. Pengujian kotak hitam hanya memeriksa bagian-bagian dasar system; itu tidak mempelajari struktur logis internalnya. Ini memastikan bahwa input diterima dengan benar dan output dibuat dengan benar.
+Keuntungan dari Black Box Testing:
+1) Jumlah kasus pengujian dikurangi menjadi
+Pengujian yang wajar
+2) Kasus pengujian dapat menunjukkan adanya atau tidak adanya kelas kesalahan.
+3) Black box tester tidak memiliki “bind” dengan kode.
+4) Programmer dan tester keduanya independen satu sama lain.
+5) Lebih efektif pada unit kode yang lebih besar daripada pengujian kotak yang jelas.
+Keuntungan dari pemeriksaan kotak hitam:
+:1) Jumlah kasus tes dikurangi menjadi jumlah tes yang wajar
+2) Kasus pengujian dapat menunjukkan kelas kesalahan ada atau tidak.
+3) Tester boks hitam tidak memiliki &quot;ikatan&quot; dengan kode.
+4) Tester dan programmer bekerja secara independen satu sama lain.
+5) Pengujian kotak yang jelas tidak efektif pada unit kode yang lebih besar.
+Kelemahan dari Black Box Testing:
+1) Kasus pengujian sulit dirancang tanpa spesifikasi yang jelas.
+2) Hanya sejumlah kecil input yang mungkin benar-benar dapat diuji.
+3) Beberapa bagian dari ujung belakang tidak diuji sama sekali.
+4) Peluang memiliki jalur yang tidak teridentifikasi selama tes ini
+5) Peluang untuk memiliki pengulangan tes yang sudah dilakukan oleh programmer
+Kelemahan Black Box Testing: 1) Kasus pengujian sulit dirancang tanpa spesifikasi yang jelas.
+2) Uji yang benar-benar dapat dilakukan terbatas pada jumlah input tertentu.
+3) Tidak ada uji sama sekali pada beberapa bagian ujung belakang.
+4) Kemungkinan memiliki rute yang tidak teridentifikasi selama pemeriksaan ini
+5) Peluang untuk memiliki pengulangan tes yang telah dilakukan oleh programmer
+Sawant, A. A., Bari, P. H., & Chawan, P. M. (2012). Software Testing Techniques and Strategies. International Journal of Engineering Research and Applications, 2.
+(Sawant et al., 2012)
+
+
+pengujian perangkat lunak mengidentifikasi cacat, kelemahan atau kesalahan dalam kode aplikasi yang harus diperbaiki. kita juga dapat mendefinisikan penguasaan software sebagai proses mengakses fungsionalitas dan keakuratan perangkat lunaknya melalui analisis. tujuan utama penguaian dapat berupa jaminan kualitas, penilaian keandalan, validasi dan verifikasi. pemeriksaan perangkat lunakan adalah komponen fundamental dari penguatan kualitas software dan mewakili peninjauan spesifikasi, desain dan pengkodean.
+Pengujian perangkat lunak menemukan kesalahan, kelemahan, atau kesalahan dalam kode aplikasi yang perlu diperbaiki. Selain itu, penguasaan software adalah proses mengakses keakuratan dan fungsi perangkat lunak melalui analisis. Jaminan kualitas, penilaian keandalan, validasi, dan verifikasi dapat menjadi tujuan utama penguaian. Pemeriksaan perangkat lunak, yang mencakup peninjauan spesifikasi, desain, dan pengkodean, merupakan komponen penting dalam meningkatkan kualitas software.
+Teknik Pengujian Kotak Hitam (Black Box Testing Technique): adalah teknik pengujian tanpa memiliki pengetahuan apa pun tentang kerja internal aplikasi. ia hanya memeriksa aspek fundamental dari sistem dan tidak memiliki relevansi atau sedikit dengan struktur logis internal sistem.
+Teknik Pengujian Kotak Hitam adalah teknik pengujian yang membutuhkan pengetahuan dasar tentang cara aplikasi bekerja. Ia tidak memiliki hubungan apa pun dengan struktur logis internal system dan hanya memeriksa elemen-elemen dasar.
+Keuntungan :
+1. efisien untuk segmen kode besar
+2. test perception sangat sederhana
+3. Perspektif pengguna jelas dipisahkan dari perspektif pengembang. (programmer and tester are independent of each other)
+4. pengembangan kasus tes yang lebih cepat
+Kelemahan
+1. hanya sejumlah skenario tes yang dipilih yang sebenarnya dilakukan. sebagai hasilnya, hanya ada cakupan terbatas.
+2. tanpa spesifikasi yang jelas kasus tes sulit untuk merancang
+3) Pengujian yang tidak efektif
+Keunggulan:
+1. efektif untuk segmen kode yang signifikan
+2. Tes persepsi sangat mudah
+3. Pandangan pengembang dan pengguna jelas berbeda. (Programer dan tester bekerja sendiri)
+4. mengembangkan kasus tes yang dapat dilakukan dengan cepat
+
+
+Kelemahan
+1. Hanya sejumlah skenario tes yang dipilih dan dilakukan secara nyata. Akibatnya, cakupan terbatas.
+2. kasus tes yang sulit dirancang tanpa spesifikasi yang jelas
+3) Pengujian yang gagal
+Ehmer, M., & Khan, F. (2012). A Comparative Study of White Box, Black Box and Grey Box Testing Techniques. International Journal of Advanced Computer Science and Applications, 3(6). https://doi.org/10.14569/ijacsa.2012.030603
+(Ehmer & Khan, 2012)
+
+
+
+
+Black box testing adalah teknik pengujian perangkat lunak. digunakan untuk menentukan fungsionalitas aplikasi. fokus utama dari black box test adalah input yang tersedia untuk aplikasi dan output yang diharapkan untuk setiap nilai input.
+Metode pengujian ini didasarkan pada persyaratan dan spesifikasi perangkat lunak. itu adalah teknik penguasaan software di mana fungsi internal item yang diuji tidak diketahui oleh penguji.
+teknik ini dinamakan demikian karena dalam tes ini, tester tidak perlu tahu tentang implementasi kode internal dari aplikasi. tes ini menangani baik input yang valid dan tidak sah sesuai dengan kebutuhan pelanggan
+Metode pengujian perangkat lunak dikenal sebagai uji kotak hitam. digunakan untuk mengevaluasi kinerja aplikasi. Input yang tersedia untuk aplikasi dan output yang diharapkan untuk setiap nilai input adalah fokus utama black box test.
+Metode pengujian ini didasarkan pada spesifikasi dan persyaratan perangkat lunak. Ini adalah metode penguasaan software di mana penguji tidak tahu fungsi internal item yang diuji.
+Teknik ini dinamakan demikian karena tester tidak perlu mengetahui cara menjalankan kode internal aplikasi. Untuk memenuhi kebutuhan pelanggan, tes ini menangani input yang sah dan tidak sah.
+Keuntungan Black Box Testing
+1. pengujian dilakukan sesuai dengan persyaratan sudut pandang pelanggan
+2.pengujian dilakukan oleh pihak ketiga untuk menghindari bias pengembang
+3.Penguji dapat bukan orang teknis. pengetahuan pemrograman dan implementasi tidak diperlukan untuk teknik pengujian ini.
+4.Pengujian efisien ketika digunakan pada sistem yang lebih besar
+
+Kekurangan Black Box Testing
+1.Tes redundant dapat dibentuk jika desainer / pengembang perangkat lunak telah menjalankan kasus tes
+2. sangat sulit untuk merancang kasus tes jika persyaratan tidak jelas dan ringkas
+3.Pengujian ini tidak efisien untuk menguji segmen kode yang kompleks
+4.Hasil dari tes ini seringkali overestimated.
+Keuntungan Tes Black Box: 1. Uji coba dilakukan sesuai dengan persyaratan pelanggan; 2. Uji coba dilakukan oleh pihak ketiga untuk mencegah bias pengembang
+3. Penguji mungkin tidak memiliki kemampuan teknis yang cukup. Teknik pengujian ini tidak membutuhkan pengetahuan pemrograman dan implementasi.
+4. Pengujian yang efektif ketika diterapkan pada sistem yang lebih kompleks
+
+
+Kekurangan Tes Black Box 1. Jika desainer atau pengembang perangkat lunak telah menjalankan kasus tes, tes redundant dapat dibuat.
+2. Desain kasus tes sangat sulit jika persyaratan tidak jelas dan tidak ringkas.
+3. Uji ini tidak efektif untuk menguji bagian kode yang kompleks.
+4. Seringkali, hasil ujian dilebih-lebihkan.
+Verma, A., Khatana, A., & Chaudhary, S. (2017). A Comparative Study of Black Box Testing and White Box Testing. International Journal of Computer Sciences and Engineering, 5(12), 301–304. https://doi.org/10.26438/ijcse/v5i12.301304
+(Verma et al., 2017).
