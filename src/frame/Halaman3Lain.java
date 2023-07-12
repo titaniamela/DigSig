@@ -43,18 +43,29 @@ public class Halaman3Lain extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         TakeMessage = new javax.swing.JTextField();
         TData = new javax.swing.JButton();
-        btnVerif = new javax.swing.JButton();
         TPrivate = new javax.swing.JToggleButton();
+        jPanel1 = new javax.swing.JPanel();
+        btnVerif = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        setTitle("Verify");
+        setTitle("DiTure");
+        setIconImage(new javax.swing.ImageIcon(getClass().getResource("/assets/icon.png")).getImage());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 20)); // NOI18N
-        jLabel1.setText("Verification Digital Signature");
+        jLabel1.setForeground(new java.awt.Color(18, 8, 121));
+        jLabel1.setText("Verifikasi Tanda Tangan Digital");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 20, -1, -1));
 
         TakeMessage.setEditable(false);
+        TakeMessage.setBackground(new java.awt.Color(231, 238, 254));
+        TakeMessage.setForeground(new java.awt.Color(17, 7, 119));
+        getContentPane().add(TakeMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 85, 270, -1));
 
-        TData.setText("Load Data");
+        TData.setBackground(new java.awt.Color(79, 82, 255));
+        TData.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        TData.setForeground(new java.awt.Color(220, 228, 252));
+        TData.setText("Ambil Data");
         TData.setMaximumSize(new java.awt.Dimension(85, 22));
         TData.setMinimumSize(new java.awt.Dimension(85, 22));
         TData.addActionListener(new java.awt.event.ActionListener() {
@@ -62,8 +73,25 @@ public class Halaman3Lain extends javax.swing.JFrame {
                 TDataActionPerformed(evt);
             }
         });
+        getContentPane().add(TData, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 85, 118, -1));
 
-        btnVerif.setText("Verify");
+        TPrivate.setBackground(new java.awt.Color(79, 82, 255));
+        TPrivate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        TPrivate.setForeground(new java.awt.Color(220, 228, 252));
+        TPrivate.setText("Ambil Kunci");
+        TPrivate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TPrivateActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TPrivate, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 141, 118, -1));
+
+        jPanel1.setBackground(new java.awt.Color(222, 230, 253));
+
+        btnVerif.setBackground(new java.awt.Color(79, 82, 255));
+        btnVerif.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnVerif.setForeground(new java.awt.Color(220, 228, 252));
+        btnVerif.setText("Verifikasi");
         btnVerif.setPreferredSize(new java.awt.Dimension(85, 22));
         btnVerif.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,50 +99,24 @@ public class Halaman3Lain extends javax.swing.JFrame {
             }
         });
 
-        TPrivate.setText("Load Key");
-        TPrivate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TPrivateActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(204, Short.MAX_VALUE)
+                .addComponent(btnVerif, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(186, 186, 186))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(234, Short.MAX_VALUE)
+                .addComponent(btnVerif, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86))
+        );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(TakeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TPrivate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(TData, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
-                .addGap(34, 34, 34))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(105, 105, 105))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnVerif, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(178, 178, 178))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TakeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addComponent(TPrivate)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addComponent(btnVerif, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 350));
 
         pack();
         setLocationRelativeTo(null);
@@ -142,7 +144,7 @@ public class Halaman3Lain extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Pilih file terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     } else if (!TPrivate.isSelected()) {
-        JOptionPane.showMessageDialog(this, "Klik tombol Load Key terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Klik tombol Ambil Kunci terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }else{
         try {
@@ -152,19 +154,21 @@ public class Halaman3Lain extends javax.swing.JFrame {
         BigInteger currentSignature = VERIFY.getCurrentSignature();
 
         if (storedSignature != null && currentSignature != null && VERIFY.compareSignature(storedSignature, currentSignature)) {
-            JOptionPane.showMessageDialog(this, "Digital Signature Valid (tidak ada perubahan yang terjadi)", "Verification Result", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Tanda Tangan Digital Sesuai", "Status Verifikasi", JOptionPane.INFORMATION_MESSAGE);
+            VerifResult hal4 = new VerifResult();
+            hal4.setVisible(true);
+            VerifResult.Sign1.setText(RSA.encryptedHash.toString());
+            VerifResult.Sign2.setText(VERIFY.currentSignature.toString());
+            VerifResult.status.setText("Hasil Proses Tanda Tangan Digital Sama.\nTidak Ada Kesalahan atau Perubahan yang Terjadi.");
         } else {
-            JOptionPane.showMessageDialog(this, "Digital Signature Tidak Valid (kemungkinan ada kesalahan atau perubahan)", "Verification Result", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Tanda Tangan Digital Tidak Sesuai", "Status Verifikasi", JOptionPane.ERROR_MESSAGE);
+            VerifResult hal4 = new VerifResult();
+            hal4.setVisible(true);
+            this.setVisible(false);
+            VerifResult.Sign1.setText(RSA.encryptedHash.toString());
+            VerifResult.Sign2.setText(VERIFY.currentSignature.toString());
+            VerifResult.status.setText("Hasil Proses Tanda Tangan Digital Berbeda.\nKemungkinan Telah Terjadi Perubahan.");
         }
-        int option = JOptionPane.showOptionDialog(this, "Apa yang ingin Anda lakukan selanjutnya?", "Opsi", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new Object[]{"Keluar dari Aplikasi", "Buat Tanda Tangan Digital Lagi"}, "Keluar dari Aplikasi");
-            if (option == JOptionPane.YES_OPTION) {
-                JOptionPane.showMessageDialog(this, "Terima kasih telah menggunakan aplikasi ini.", "Terima Kasih", JOptionPane.INFORMATION_MESSAGE);
-                System.exit(0);
-            } else if (option == JOptionPane.NO_OPTION) {
-                Halaman1_1 hal1 = new Halaman1_1();
-                hal1.setVisible(true);
-                this.setVisible(false);
-            }
     } catch (NoSuchAlgorithmException ex) {
         Logger.getLogger(Halaman3Lain.class.getName()).log(Level.SEVERE, null, ex);
     } catch (IOException ex) {
@@ -174,6 +178,8 @@ public class Halaman3Lain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerifActionPerformed
 
     private void TPrivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TPrivateActionPerformed
+        TPrivate.setBackground(new java.awt.Color(195,220,251));
+        TPrivate.setForeground(new java.awt.Color(29,23,90));
         if(TPrivate.isSelected()){
             String privateKey = Halaman1_1.KPrivat.getText();
         }else
@@ -222,5 +228,6 @@ public class Halaman3Lain extends javax.swing.JFrame {
     public static javax.swing.JTextField TakeMessage;
     private javax.swing.JButton btnVerif;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

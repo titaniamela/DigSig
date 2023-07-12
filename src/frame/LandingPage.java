@@ -26,33 +26,48 @@ public class LandingPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         btnMulai = new javax.swing.JButton();
+        untukBG1 = new assets.UntukBG();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("DiTure");
+        setIconImage(new javax.swing.ImageIcon(getClass().getResource("/assets/icon.png")).getImage());
+        setMinimumSize(new java.awt.Dimension(490, 500));
+        setPreferredSize(new java.awt.Dimension(490, 500));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnMulai.setText("start");
+        jPanel1.setBackground(new java.awt.Color(223, 230, 253));
+        jPanel1.setMinimumSize(new java.awt.Dimension(490, 500));
+        jPanel1.setPreferredSize(new java.awt.Dimension(490, 500));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnMulai.setBackground(new java.awt.Color(79, 82, 255));
+        btnMulai.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMulai.setForeground(new java.awt.Color(220, 228, 252));
+        btnMulai.setText("MULAI");
         btnMulai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMulaiActionPerformed(evt);
             }
         });
+        jPanel1.add(btnMulai, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 80, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(176, Short.MAX_VALUE)
-                .addComponent(btnMulai)
-                .addGap(152, 152, 152))
+        javax.swing.GroupLayout untukBG1Layout = new javax.swing.GroupLayout(untukBG1);
+        untukBG1.setLayout(untukBG1Layout);
+        untukBG1Layout.setHorizontalGroup(
+            untukBG1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(btnMulai)
-                .addContainerGap(163, Short.MAX_VALUE))
+        untukBG1Layout.setVerticalGroup(
+            untukBG1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        jPanel1.add(untukBG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 310, 220));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 490));
 
         pack();
         setLocationRelativeTo(null);
@@ -61,7 +76,7 @@ public class LandingPage extends javax.swing.JFrame {
     private void btnMulaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMulaiActionPerformed
         Halaman1_1 halaman1 = new Halaman1_1();
         halaman1.setVisible(true);
-        this.setVisible(false); 
+        this.setVisible(false);
     }//GEN-LAST:event_btnMulaiActionPerformed
 
     /**
@@ -101,5 +116,7 @@ public class LandingPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMulai;
+    private javax.swing.JPanel jPanel1;
+    private assets.UntukBG untukBG1;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,7 +26,7 @@ import javax.swing.JTextField;
 public class RSA {
     private static final int CERTAINTY = 10;
     private static final int KEY_LENGTH = 64;
-    private static BigInteger encryptedHash;
+    public static BigInteger encryptedHash;
     private static BigInteger d;
     private static BigInteger n;
     
@@ -65,11 +65,11 @@ public class RSA {
         String signatureFilePath = getSignatureFilePath(filePath);
         try (FileWriter writer = new FileWriter(signatureFilePath)) {
             writer.write("Digital Signature: " + encryptedHash.toString() + "\n");
+            
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-
     
     private static BigInteger generatePrime() {
         Random random = new Random();

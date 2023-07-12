@@ -22,15 +22,15 @@ import java.security.NoSuchAlgorithmException;
  * @author Shania
  */
 public class VERIFY {
-    private static BigInteger currentSignature;
+    public static BigInteger currentSignature;
     
     public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
-        // Load private key from input
-        String privateKey = Halaman1_1.KPrivat.getText();
-        BigInteger[] privateKeyValues = extractPrivateKeyValues(privateKey);
-        if (privateKeyValues != null) {
-            BigInteger d = privateKeyValues[0];
-            BigInteger n = privateKeyValues[1];
+            // Load private key from input
+            String privateKey = Halaman1_1.KPrivat.getText();
+            BigInteger[] privateKeyValues = extractPrivateKeyValues(privateKey);
+            if (privateKeyValues != null) {
+                BigInteger d = privateKeyValues[0];
+                BigInteger n = privateKeyValues[1];
 
             // Hash message
             String filePath = Halaman3Lain.TakeMessage.getText();
