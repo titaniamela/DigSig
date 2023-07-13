@@ -252,7 +252,7 @@ public class Halaman1_1 extends javax.swing.JFrame {
 
     private void SaveKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveKeyActionPerformed
         if(KPublik.getText().isEmpty() || KPrivat.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Klik Buat Kunci terlebih dahulu!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Klik Buat Kunci terlebih dahulu!", "Gagal", JOptionPane.ERROR_MESSAGE);
             return;
         }
         JFileChooser fileChooser = new JFileChooser();
@@ -269,7 +269,8 @@ public class Halaman1_1 extends javax.swing.JFrame {
                 String privateFilePath = fileChooser.getSelectedFile().getAbsolutePath() + "_private.txt";
 
                 if (publicFilePath.isEmpty() || privateFilePath.isEmpty()) {
-                    JOptionPane.showMessageDialog(this, "Nama file tidak valid!", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Nama file tidak sesuai!", "Gagal", JOptionPane.ERROR_MESSAGE);
+                    fileSaved = false;
                     continue;
                 }
 
