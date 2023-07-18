@@ -49,7 +49,6 @@ public class Halaman1_1 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         GetKey = new javax.swing.JButton();
-        SaveKey = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         bilP = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -61,26 +60,33 @@ public class Halaman1_1 extends javax.swing.JFrame {
         KPrivat = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         KPublik = new javax.swing.JTextArea();
+        untukLatar1 = new assets.UntukLatar();
+        SaveKey = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DiTure");
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/assets/icon.png")).getImage());
         setMinimumSize(new java.awt.Dimension(490, 500));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(222, 230, 253));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(17, 7, 119));
         jLabel7.setText("Kunci Publik");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 353, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(18, 8, 121));
         jLabel8.setText("Kunci Privat");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 428, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Sitka Heading", 1, 19)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(17, 7, 119));
         jLabel6.setText("Pasangan Kunci");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 287, 419, -1));
 
         GetKey.setBackground(new java.awt.Color(79, 82, 255));
         GetKey.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
@@ -93,6 +99,63 @@ public class Halaman1_1 extends javax.swing.JFrame {
                 GetKeyActionPerformed(evt);
             }
         });
+        jPanel1.add(GetKey, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 34, 100, 30));
+
+        jLabel2.setFont(new java.awt.Font("Sitka Heading", 1, 19)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(17, 7, 119));
+        jLabel2.setText("Bilangan Prima Random");
+        jLabel2.setAutoscrolls(true);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 92, -1, -1));
+
+        bilP.setEditable(false);
+        bilP.setBackground(new java.awt.Color(231, 238, 254));
+        bilP.setForeground(new java.awt.Color(17, 7, 119));
+        jPanel1.add(bilP, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 135, 305, -1));
+
+        jLabel3.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(17, 7, 119));
+        jLabel3.setText("p");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 140, 10, -1));
+
+        bilQ.setEditable(false);
+        bilQ.setBackground(new java.awt.Color(231, 238, 254));
+        bilQ.setForeground(new java.awt.Color(17, 7, 119));
+        jPanel1.add(bilQ, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 180, 305, -1));
+
+        jLabel4.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(17, 7, 119));
+        jLabel4.setText("q");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 185, -1, -1));
+
+        bilE.setEditable(false);
+        bilE.setBackground(new java.awt.Color(231, 238, 254));
+        bilE.setForeground(new java.awt.Color(17, 7, 119));
+        jPanel1.add(bilE, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 225, 305, -1));
+
+        jLabel5.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(17, 7, 119));
+        jLabel5.setText("e");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 225, -1, -1));
+
+        KPrivat.setBackground(new java.awt.Color(231, 238, 254));
+        KPrivat.setColumns(20);
+        KPrivat.setForeground(new java.awt.Color(18, 8, 121));
+        KPrivat.setLineWrap(true);
+        KPrivat.setRows(5);
+        jScrollPane1.setViewportView(KPrivat);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 409, 300, 60));
+
+        KPublik.setBackground(new java.awt.Color(231, 238, 254));
+        KPublik.setColumns(20);
+        KPublik.setForeground(new java.awt.Color(18, 8, 121));
+        KPublik.setLineWrap(true);
+        KPublik.setRows(5);
+        jScrollPane2.setViewportView(KPublik);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 330, 300, 61));
+
+        untukLatar1.setBackground(new java.awt.Color(220, 228, 252));
 
         SaveKey.setBackground(new java.awt.Color(79, 82, 255));
         SaveKey.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
@@ -104,147 +167,26 @@ public class Halaman1_1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Sitka Heading", 1, 19)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel2.setText("Bilangan Prima Random");
-        jLabel2.setAutoscrolls(true);
-
-        bilP.setEditable(false);
-        bilP.setBackground(new java.awt.Color(231, 238, 254));
-        bilP.setForeground(new java.awt.Color(17, 7, 119));
-
-        jLabel3.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel3.setText("p");
-
-        bilQ.setEditable(false);
-        bilQ.setBackground(new java.awt.Color(231, 238, 254));
-        bilQ.setForeground(new java.awt.Color(17, 7, 119));
-
-        jLabel4.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel4.setText("q");
-
-        bilE.setEditable(false);
-        bilE.setBackground(new java.awt.Color(231, 238, 254));
-        bilE.setForeground(new java.awt.Color(17, 7, 119));
-
-        jLabel5.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel5.setText("e");
-
-        KPrivat.setBackground(new java.awt.Color(231, 238, 254));
-        KPrivat.setColumns(20);
-        KPrivat.setForeground(new java.awt.Color(18, 8, 121));
-        KPrivat.setLineWrap(true);
-        KPrivat.setRows(5);
-        jScrollPane1.setViewportView(KPrivat);
-
-        KPublik.setBackground(new java.awt.Color(231, 238, 254));
-        KPublik.setColumns(20);
-        KPublik.setForeground(new java.awt.Color(18, 8, 121));
-        KPublik.setLineWrap(true);
-        KPublik.setRows(5);
-        jScrollPane2.setViewportView(KPublik);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(GetKey, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(179, 179, 179))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(32, 32, 32))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jLabel2))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(141, 141, 141)
-                            .addComponent(bilE, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addGap(103, 103, 103)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bilQ, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel5)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(bilP, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(41, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+        javax.swing.GroupLayout untukLatar1Layout = new javax.swing.GroupLayout(untukLatar1);
+        untukLatar1.setLayout(untukLatar1Layout);
+        untukLatar1Layout.setHorizontalGroup(
+            untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                .addContainerGap(352, Short.MAX_VALUE)
                 .addComponent(SaveKey, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addGap(18, 18, 18))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(GetKey, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(bilP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bilQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bilE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(40, 40, 40)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(57, 57, 57)
-                        .addComponent(jLabel8)
-                        .addGap(431, 431, 431))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(SaveKey, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(360, 360, 360))))
+        untukLatar1Layout.setVerticalGroup(
+            untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                .addContainerGap(496, Short.MAX_VALUE)
+                .addComponent(SaveKey, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 551, Short.MAX_VALUE)
-        );
+        jPanel1.add(untukLatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 550));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 551));
 
         pack();
         setLocationRelativeTo(null);
@@ -369,5 +311,6 @@ public class Halaman1_1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private assets.UntukLatar untukLatar1;
     // End of variables declaration//GEN-END:variables
 }

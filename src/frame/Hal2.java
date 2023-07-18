@@ -39,13 +39,14 @@ public class Hal2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txtPath = new javax.swing.JTextField();
-        LoadData = new javax.swing.JButton();
-        PrevKey = new javax.swing.JToggleButton();
-        NewKey = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        untukLatar1 = new assets.UntukLatar();
+        jLabel1 = new javax.swing.JLabel();
+        LoadData = new javax.swing.JButton();
+        txtPath = new javax.swing.JTextField();
+        PrevKey = new javax.swing.JToggleButton();
         Sign = new javax.swing.JButton();
+        NewKey = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DiTure");
@@ -53,16 +54,14 @@ public class Hal2 extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(222, 230, 253));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        untukLatar1.setBackground(new java.awt.Color(220, 228, 252));
+
         jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(17, 7, 119));
         jLabel1.setText("Tanda Tangan Digital");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 23, -1, -1));
-
-        txtPath.setEditable(false);
-        txtPath.setBackground(new java.awt.Color(231, 238, 254));
-        txtPath.setForeground(new java.awt.Color(17, 7, 119));
-        txtPath.setSelectionColor(new java.awt.Color(18, 8, 121));
-        getContentPane().add(txtPath, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 122, 300, -1));
 
         LoadData.setBackground(new java.awt.Color(79, 82, 255));
         LoadData.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -73,7 +72,11 @@ public class Hal2 extends javax.swing.JFrame {
                 LoadDataActionPerformed(evt);
             }
         });
-        getContentPane().add(LoadData, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 122, 119, -1));
+
+        txtPath.setEditable(false);
+        txtPath.setBackground(new java.awt.Color(231, 238, 254));
+        txtPath.setForeground(new java.awt.Color(17, 7, 119));
+        txtPath.setSelectionColor(new java.awt.Color(18, 8, 121));
 
         PrevKey.setBackground(new java.awt.Color(79, 82, 255));
         PrevKey.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -89,20 +92,6 @@ public class Hal2 extends javax.swing.JFrame {
                 PrevKeyActionPerformed(evt);
             }
         });
-        getContentPane().add(PrevKey, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 162, 120, -1));
-
-        NewKey.setBackground(new java.awt.Color(79, 82, 255));
-        NewKey.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        NewKey.setForeground(new java.awt.Color(220, 228, 252));
-        NewKey.setText("Buat Kunci Baru");
-        NewKey.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NewKeyActionPerformed(evt);
-            }
-        });
-        getContentPane().add(NewKey, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 309, -1, -1));
-
-        jPanel1.setBackground(new java.awt.Color(222, 230, 253));
 
         Sign.setBackground(new java.awt.Color(79, 82, 255));
         Sign.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -114,24 +103,61 @@ public class Hal2 extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(338, Short.MAX_VALUE)
-                .addComponent(Sign, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+        NewKey.setBackground(new java.awt.Color(79, 82, 255));
+        NewKey.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        NewKey.setForeground(new java.awt.Color(220, 228, 252));
+        NewKey.setText("Buat Kunci Baru");
+        NewKey.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewKeyActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout untukLatar1Layout = new javax.swing.GroupLayout(untukLatar1);
+        untukLatar1.setLayout(untukLatar1Layout);
+        untukLatar1Layout.setHorizontalGroup(
+            untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(untukLatar1Layout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(161, 161, 161))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                        .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(untukLatar1Layout.createSequentialGroup()
+                                .addComponent(txtPath, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(LoadData, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(untukLatar1Layout.createSequentialGroup()
+                                .addComponent(NewKey)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Sign)
+                                    .addComponent(PrevKey, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(41, 41, 41))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(311, Short.MAX_VALUE)
-                .addComponent(Sign)
-                .addGap(67, 67, 67))
+        untukLatar1Layout.setVerticalGroup(
+            untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(untukLatar1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addGap(78, 78, 78)
+                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LoadData)
+                    .addComponent(txtPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addComponent(PrevKey)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Sign)
+                    .addComponent(NewKey))
+                .addGap(80, 80, 80))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 400));
+        jPanel1.add(untukLatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 420));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 420));
 
         pack();
         setLocationRelativeTo(null);
@@ -239,5 +265,6 @@ public class Hal2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JTextField txtPath;
+    private assets.UntukLatar untukLatar1;
     // End of variables declaration//GEN-END:variables
 }
