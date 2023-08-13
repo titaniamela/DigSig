@@ -53,12 +53,12 @@ public class VerifResult extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel1.setText("Tanda Tangan Digital Awal");
+        jLabel1.setText("Initial Digital Signature");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 24, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel2.setText("Tanda Tangan Digital Hasil Verifikasi");
+        jLabel2.setText("Digital Signature of the Verification Result");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 132, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
@@ -93,7 +93,7 @@ public class VerifResult extends javax.swing.JFrame {
         btnKeluar.setBackground(new java.awt.Color(79, 82, 255));
         btnKeluar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnKeluar.setForeground(new java.awt.Color(220, 228, 252));
-        btnKeluar.setText("Keluar");
+        btnKeluar.setText("Exit");
         btnKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnKeluarActionPerformed(evt);
@@ -104,7 +104,7 @@ public class VerifResult extends javax.swing.JFrame {
         btnLoop.setBackground(new java.awt.Color(79, 82, 255));
         btnLoop.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnLoop.setForeground(new java.awt.Color(220, 228, 252));
-        btnLoop.setText("Buat Tanda Tangan Baru");
+        btnLoop.setText("Create a New Digital Signature");
         btnLoop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoopActionPerformed(evt);
@@ -140,7 +140,7 @@ public class VerifResult extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoopActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
-        JOptionPane.showMessageDialog(this, "TerimaKasih", "Keluar", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Thank You", "Exit", JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
             
     }//GEN-LAST:event_btnKeluarActionPerformed

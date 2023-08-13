@@ -60,20 +60,8 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="TPrivate" alignment="1" min="-2" pref="118" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="TakeMessage" min="-2" pref="310" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="TData" min="-2" pref="118" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="53" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -82,6 +70,15 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="btnVerif" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="TakeMessage" min="-2" pref="330" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="TPrivate" min="-2" pref="87" max="-2" attributes="0"/>
+                                  <Component id="TData" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -97,9 +94,9 @@
                           <Component id="TakeMessage" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="TData" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="TPrivate" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="107" max="32767" attributes="0"/>
+                      <EmptySpace pref="120" max="32767" attributes="0"/>
                       <Component id="btnVerif" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                   </Group>
@@ -115,7 +112,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="79" green="8" red="12" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Verifikasi Tanda Tangan Digital"/>
+                <Property name="text" type="java.lang.String" value="Digital Signature Verification"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="TData">
@@ -129,7 +126,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="fc" green="e4" red="dc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ambil Data"/>
+                <Property name="text" type="java.lang.String" value="Load Data"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[85, 22]"/>
                 </Property>
@@ -166,7 +163,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="fc" green="e4" red="dc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ambil Kunci"/>
+                <Property name="text" type="java.lang.String" value="Load Key"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TPrivateActionPerformed"/>
@@ -183,7 +180,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="fc" green="e4" red="dc" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Verifikasi"/>
+                <Property name="text" type="java.lang.String" value="Verify"/>
                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[85, 22]"/>
                 </Property>

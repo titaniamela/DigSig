@@ -60,12 +60,12 @@ public class Halaman3Lain extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(18, 8, 121));
-        jLabel1.setText("Verifikasi Tanda Tangan Digital");
+        jLabel1.setText("Digital Signature Verification");
 
         TData.setBackground(new java.awt.Color(79, 82, 255));
         TData.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         TData.setForeground(new java.awt.Color(220, 228, 252));
-        TData.setText("Ambil Data");
+        TData.setText("Load Data");
         TData.setMaximumSize(new java.awt.Dimension(85, 22));
         TData.setMinimumSize(new java.awt.Dimension(85, 22));
         TData.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class Halaman3Lain extends javax.swing.JFrame {
         TPrivate.setBackground(new java.awt.Color(79, 82, 255));
         TPrivate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         TPrivate.setForeground(new java.awt.Color(220, 228, 252));
-        TPrivate.setText("Ambil Kunci");
+        TPrivate.setText("Load Key");
         TPrivate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TPrivateActionPerformed(evt);
@@ -91,7 +91,7 @@ public class Halaman3Lain extends javax.swing.JFrame {
         btnVerif.setBackground(new java.awt.Color(79, 82, 255));
         btnVerif.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnVerif.setForeground(new java.awt.Color(220, 228, 252));
-        btnVerif.setText("Verifikasi");
+        btnVerif.setText("Verify");
         btnVerif.setPreferredSize(new java.awt.Dimension(85, 22));
         btnVerif.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,23 +104,21 @@ public class Halaman3Lain extends javax.swing.JFrame {
         untukLatar1Layout.setHorizontalGroup(
             untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(untukLatar1Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(TPrivate, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(untukLatar1Layout.createSequentialGroup()
-                        .addComponent(TakeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(TData, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(124, 124, 124))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
                         .addComponent(btnVerif, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(208, 208, 208))))
+                        .addGap(208, 208, 208))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                        .addComponent(TakeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TPrivate, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(52, 52, 52))))
         );
         untukLatar1Layout.setVerticalGroup(
             untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,9 +129,9 @@ public class Halaman3Lain extends javax.swing.JFrame {
                 .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TakeMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addComponent(TPrivate)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addComponent(btnVerif, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
         );
@@ -157,7 +155,7 @@ public class Halaman3Lain extends javax.swing.JFrame {
                 String filePath = file.getAbsolutePath();
                 TakeMessage.setText(filePath);
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "Terjadi kesalahan saat memilih file:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "An error occurred when selecting a file:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 e.printStackTrace();
             }
         }
@@ -165,10 +163,10 @@ public class Halaman3Lain extends javax.swing.JFrame {
 
     private void btnVerifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifActionPerformed
         if (TakeMessage.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Pilih file terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Select the file first.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     } else if (!TPrivate.isSelected()) {
-        JOptionPane.showMessageDialog(this, "Klik tombol Ambil Kunci terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Click the Load Key button first.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }else{
         try {
@@ -178,20 +176,20 @@ public class Halaman3Lain extends javax.swing.JFrame {
         BigInteger currentSignature = VERIFY.getCurrentSignature();
 
         if (storedSignature != null && currentSignature != null && VERIFY.compareSignature(storedSignature, currentSignature)) {
-            JOptionPane.showMessageDialog(this, "Tanda Tangan Digital Sesuai", "Status Verifikasi", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Matching Digital Signature", "Verification Status", JOptionPane.INFORMATION_MESSAGE);
             VerifResult hal4 = new VerifResult();
             hal4.setVisible(true);
             VerifResult.Sign1.setText(RSA.encryptedHash.toString());
             VerifResult.Sign2.setText(VERIFY.currentSignature.toString());
-            VerifResult.status.setText("Hasil Proses Tanda Tangan Digital Sama.\nTidak Ada Kesalahan atau Perubahan yang Terjadi.");
+            VerifResult.status.setText("Same Digital Signature Process Results.\nNo Errors or Changes Occurred.");
         } else {
-            JOptionPane.showMessageDialog(this, "Tanda Tangan Digital Tidak Sesuai", "Status Verifikasi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Digital Signature does not Match", "Verification Status", JOptionPane.ERROR_MESSAGE);
             VerifResult hal4 = new VerifResult();
             hal4.setVisible(true);
             this.setVisible(false);
             VerifResult.Sign1.setText(RSA.encryptedHash.toString());
             VerifResult.Sign2.setText(VERIFY.currentSignature.toString());
-            VerifResult.status.setText("Hasil Proses Tanda Tangan Digital Berbeda.\nKemungkinan Telah Terjadi Perubahan.");
+            VerifResult.status.setText("Different Digital Signature Process Results.\nPossible Changes Have Occurred.");
         }
     } catch (NoSuchAlgorithmException ex) {
         Logger.getLogger(Halaman3Lain.class.getName()).log(Level.SEVERE, null, ex);
@@ -207,7 +205,7 @@ public class Halaman3Lain extends javax.swing.JFrame {
         if(TPrivate.isSelected()){
             String privateKey = Halaman1_1.KPrivat.getText();
         }else
-            JOptionPane.showMessageDialog(this, "Tombol belum diaktifkan!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Button not activated!", "Error", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_TPrivateActionPerformed
 
     /**

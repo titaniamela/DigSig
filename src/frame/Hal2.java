@@ -61,12 +61,12 @@ public class Hal2 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel1.setText("Tanda Tangan Digital");
+        jLabel1.setText("Digital Signature");
 
         LoadData.setBackground(new java.awt.Color(79, 82, 255));
         LoadData.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LoadData.setForeground(new java.awt.Color(220, 228, 252));
-        LoadData.setText("Ambil Data");
+        LoadData.setText("Load Data");
         LoadData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoadDataActionPerformed(evt);
@@ -81,7 +81,7 @@ public class Hal2 extends javax.swing.JFrame {
         PrevKey.setBackground(new java.awt.Color(79, 82, 255));
         PrevKey.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         PrevKey.setForeground(new java.awt.Color(220, 228, 252));
-        PrevKey.setText("Ambil Kunci");
+        PrevKey.setText("Load Key");
         PrevKey.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 PrevKeyMousePressed(evt);
@@ -96,7 +96,7 @@ public class Hal2 extends javax.swing.JFrame {
         Sign.setBackground(new java.awt.Color(79, 82, 255));
         Sign.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Sign.setForeground(new java.awt.Color(220, 228, 252));
-        Sign.setText("Tanda Tangan");
+        Sign.setText("Signing");
         Sign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SignActionPerformed(evt);
@@ -106,7 +106,7 @@ public class Hal2 extends javax.swing.JFrame {
         NewKey.setBackground(new java.awt.Color(79, 82, 255));
         NewKey.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         NewKey.setForeground(new java.awt.Color(220, 228, 252));
-        NewKey.setText("Buat Kunci Baru");
+        NewKey.setText("Generate a New Key");
         NewKey.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NewKeyActionPerformed(evt);
@@ -117,38 +117,37 @@ public class Hal2 extends javax.swing.JFrame {
         untukLatar1.setLayout(untukLatar1Layout);
         untukLatar1Layout.setHorizontalGroup(
             untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(untukLatar1Layout.createSequentialGroup()
-                .addContainerGap(62, Short.MAX_VALUE)
-                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(untukLatar1Layout.createSequentialGroup()
+                        .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addComponent(txtPath, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(LoadData, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(161, 161, 161))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
-                        .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(untukLatar1Layout.createSequentialGroup()
-                                .addComponent(txtPath, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(LoadData, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(PrevKey)
                             .addGroup(untukLatar1Layout.createSequentialGroup()
                                 .addComponent(NewKey)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Sign)
-                                    .addComponent(PrevKey, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(41, 41, 41))))
+                                .addComponent(Sign)))
+                        .addGap(59, 59, 59))))
         );
         untukLatar1Layout.setVerticalGroup(
             untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(untukLatar1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addGap(78, 78, 78)
+                .addGap(83, 83, 83)
                 .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LoadData)
                     .addComponent(txtPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGap(29, 29, 29)
                 .addComponent(PrevKey)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Sign)
                     .addComponent(NewKey))
@@ -174,7 +173,7 @@ public class Hal2 extends javax.swing.JFrame {
                 String filePath = file.getAbsolutePath();
                 txtPath.setText(filePath);
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "Terjadi kesalahan saat memilih file:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "An error occurred when selecting a file:\n" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
                 e.printStackTrace();
             }
         }
@@ -190,16 +189,16 @@ public class Hal2 extends javax.swing.JFrame {
         if(PrevKey.isSelected()){
             String privateKey = Halaman1_1.KPrivat.getText();
         } else{
-            JOptionPane.showMessageDialog(this, "Tombol belum diaktifkan!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Button not activated!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_PrevKeyActionPerformed
 
     private void SignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignActionPerformed
     if (txtPath.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Pilih file terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Select the file fisrt.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }else if (!PrevKey.isSelected()) {
-        JOptionPane.showMessageDialog(this, "Klik tombol Ambil Kunci terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Click the Load Key button first.", "Error", JOptionPane.ERROR_MESSAGE);
         return;
     }else{
         try {
@@ -209,7 +208,7 @@ public class Hal2 extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(Hal2.class.getName()).log(Level.SEVERE, null, ex);
         }
-       JOptionPane.showMessageDialog(this, "Tanda Tangan Digital telah tersimpan ke dalam file", "Hasil Tanda Tangan Digital", JOptionPane.INFORMATION_MESSAGE);
+       JOptionPane.showMessageDialog(this, "Digital Signature has been saved to a file", "Digital Signature Result", JOptionPane.INFORMATION_MESSAGE);
         this.dispose();
     }
             Halaman3Lain hal3 = new Halaman3Lain();

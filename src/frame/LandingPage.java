@@ -32,8 +32,6 @@ public class LandingPage extends javax.swing.JFrame {
         btnMulai = new javax.swing.JButton();
         untukBG1 = new assets.UntukBG();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
@@ -41,7 +39,6 @@ public class LandingPage extends javax.swing.JFrame {
         setTitle("DiTure");
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/assets/icon.png")).getImage());
         setMinimumSize(new java.awt.Dimension(490, 500));
-        setPreferredSize(new java.awt.Dimension(490, 500));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(223, 230, 253));
@@ -52,13 +49,13 @@ public class LandingPage extends javax.swing.JFrame {
         btnMulai.setBackground(new java.awt.Color(79, 82, 255));
         btnMulai.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnMulai.setForeground(new java.awt.Color(220, 228, 252));
-        btnMulai.setText("MULAI");
+        btnMulai.setText("START");
         btnMulai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMulaiActionPerformed(evt);
             }
         });
-        jPanel1.add(btnMulai, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 80, 30));
+        jPanel1.add(btnMulai, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 80, 30));
 
         javax.swing.GroupLayout untukBG1Layout = new javax.swing.GroupLayout(untukBG1);
         untukBG1.setLayout(untukBG1Layout);
@@ -71,36 +68,24 @@ public class LandingPage extends javax.swing.JFrame {
             .addGap(0, 220, Short.MAX_VALUE)
         );
 
-        jPanel1.add(untukBG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 370, 220));
+        jPanel1.add(untukBG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 370, 220));
 
         jLabel1.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(125, 151, 251));
         jLabel1.setText("DiTure ");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 90, 40));
 
-        jLabel2.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(125, 151, 251));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("pada sebuah data");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 150, 20));
-
-        jLabel4.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(125, 151, 251));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("digunakan untuk membuat");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 190, 20));
-
         jLabel3.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(125, 151, 251));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("adalah aplikasi yang");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 150, 20));
+        jLabel3.setText("is an application used to create");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 230, 20));
 
         jLabel5.setFont(new java.awt.Font("Sitka Subheading", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(125, 151, 251));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("tanda tangan digital");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 150, 20));
+        jLabel5.setText("a digital signature on a data");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 210, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -162,9 +147,7 @@ public class LandingPage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnMulai;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private assets.UntukBG untukBG1;

@@ -46,9 +46,7 @@ public class Halaman1_1 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        GetKey = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         bilP = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -62,6 +60,8 @@ public class Halaman1_1 extends javax.swing.JFrame {
         KPublik = new javax.swing.JTextArea();
         untukLatar1 = new assets.UntukLatar();
         SaveKey = new javax.swing.JButton();
+        GetKey = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DiTure");
@@ -75,35 +75,17 @@ public class Halaman1_1 extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel7.setText("Kunci Publik");
+        jLabel7.setText("Public Key");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 353, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(18, 8, 121));
-        jLabel8.setText("Kunci Privat");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 428, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Sitka Heading", 1, 19)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel6.setText("Pasangan Kunci");
+        jLabel6.setText("Key Pairs");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 287, 419, -1));
-
-        GetKey.setBackground(new java.awt.Color(79, 82, 255));
-        GetKey.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        GetKey.setForeground(new java.awt.Color(220, 228, 252));
-        GetKey.setText("Buat Kunci");
-        GetKey.setMaximumSize(new java.awt.Dimension(72, 22));
-        GetKey.setMinimumSize(new java.awt.Dimension(72, 22));
-        GetKey.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GetKeyActionPerformed(evt);
-            }
-        });
-        jPanel1.add(GetKey, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 34, 100, 30));
 
         jLabel2.setFont(new java.awt.Font("Sitka Heading", 1, 19)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(17, 7, 119));
-        jLabel2.setText("Bilangan Prima Random");
+        jLabel2.setText("Random Prime Numbers");
         jLabel2.setAutoscrolls(true);
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 92, -1, -1));
 
@@ -160,28 +142,57 @@ public class Halaman1_1 extends javax.swing.JFrame {
         SaveKey.setBackground(new java.awt.Color(79, 82, 255));
         SaveKey.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
         SaveKey.setForeground(new java.awt.Color(220, 228, 252));
-        SaveKey.setText("Simpan Kunci");
+        SaveKey.setText("Save Key");
         SaveKey.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SaveKeyActionPerformed(evt);
             }
         });
 
+        GetKey.setBackground(new java.awt.Color(79, 82, 255));
+        GetKey.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        GetKey.setForeground(new java.awt.Color(220, 228, 252));
+        GetKey.setText("Generate Key");
+        GetKey.setMaximumSize(new java.awt.Dimension(72, 22));
+        GetKey.setMinimumSize(new java.awt.Dimension(72, 22));
+        GetKey.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GetKeyActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(18, 8, 121));
+        jLabel8.setText("Private Key");
+
         javax.swing.GroupLayout untukLatar1Layout = new javax.swing.GroupLayout(untukLatar1);
         untukLatar1.setLayout(untukLatar1Layout);
         untukLatar1Layout.setHorizontalGroup(
             untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(untukLatar1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel8)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
-                .addContainerGap(352, Short.MAX_VALUE)
-                .addComponent(SaveKey, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addContainerGap(201, Short.MAX_VALUE)
+                .addGroup(untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                        .addComponent(GetKey, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(169, 169, 169))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
+                        .addComponent(SaveKey)
+                        .addGap(40, 40, 40))))
         );
         untukLatar1Layout.setVerticalGroup(
             untukLatar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, untukLatar1Layout.createSequentialGroup()
-                .addContainerGap(496, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(GetKey, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(45, 45, 45)
                 .addComponent(SaveKey, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addGap(26, 26, 26))
         );
 
         jPanel1.add(untukLatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 550));
@@ -194,11 +205,11 @@ public class Halaman1_1 extends javax.swing.JFrame {
 
     private void SaveKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveKeyActionPerformed
         if(KPublik.getText().isEmpty() || KPrivat.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Klik Buat Kunci terlebih dahulu!", "Gagal", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Click Generate Key button first!", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Simpan Kunci");
+        fileChooser.setDialogTitle("Save Keys");
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files", "txt");
         fileChooser.setFileFilter(filter);
         fileChooser.setCurrentDirectory(new File("C:\\Users\\Shania\\OneDrive\\Documents\\NetBeansProjects\\DigSig\\hasil\\key"));
@@ -211,7 +222,7 @@ public class Halaman1_1 extends javax.swing.JFrame {
                 String privateFilePath = fileChooser.getSelectedFile().getAbsolutePath() + "_private.txt";
 
                 if (publicFilePath.isEmpty() || privateFilePath.isEmpty()) {
-                    JOptionPane.showMessageDialog(this, "Nama file tidak sesuai!", "Gagal", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(this, "Inappropriate file name!", "Error", JOptionPane.ERROR_MESSAGE);
                     fileSaved = false;
                     continue;
                 }
@@ -220,7 +231,7 @@ public class Halaman1_1 extends javax.swing.JFrame {
                 File privateFile = new File(privateFilePath);
 
                 if (publicFile.exists() || privateFile.exists()) {
-                    int overwriteOption = JOptionPane.showConfirmDialog(this, "Nama file sudah ada. Apakah Anda ingin menimpanya?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+                    int overwriteOption = JOptionPane.showConfirmDialog(this, "The file name already exists. Do you want to keep it?", "Confirmation", JOptionPane.YES_NO_OPTION);
                     if (overwriteOption == JOptionPane.NO_OPTION) {
                         continue;
                     }
@@ -237,14 +248,14 @@ public class Halaman1_1 extends javax.swing.JFrame {
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-                JOptionPane.showMessageDialog(this, "Kunci telah disimpan", "Info", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Key has been saved", "Infomation", JOptionPane.INFORMATION_MESSAGE);
                 fileSaved = true;
 
                 Hal2 hal2 = new Hal2();
                 hal2.setVisible(true);
                 this.setVisible(false);
             }else {
-                JOptionPane.showMessageDialog(this, "Simpan kunci dibatalkan", "Info", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Save Key Cancelled", "Information", JOptionPane.INFORMATION_MESSAGE);
                 fileSaved = true;
             }
         }
